@@ -1,0 +1,9 @@
+{
+    "host": "localhost",
+    "port": 3000,
+    "database": "FastFoodRestaurants",
+    "dbUser": "ehlinystyi",
+    "dbPassword": "securepass",
+    "jwt_secret_key": "Baby-Bon",
+    "jwt_access_token_life": "2h"
+}
