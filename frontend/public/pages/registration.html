@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styleRegistration.css" rel="stylesheet" type="text/css">
+    <title>Registration</title>
+</head>
+<body>
+    <div class="registrationBox">
+        <p class="regName">Регістрація</p>
+        <form method="post" action="http://localhost:8000/api/auth/register" class="registration_form">
+            <div class="inputField">
+                <input class="login inputValue" type="text" required>
+                <label class = "LabelName">Login</label>
+            </div>
+            <div class="inputField">
+                <input class="firstName inputValue" type="text" required>
+                <label class = "LabelName">First name</label>
+            </div>
+            <div class="inputField">
+                <input class="lastName inputValue" type="text" required>
+                <label class = "LabelName">Last name</label>
+            </div>
+            <div class="inputField">
+                <input class="pswrd inputValue" type="password" required>
+                <label class = "LabelName">Password</label>
+            </div>
+            <div class="inputField">
+                <input class="pswrdRepeat inputValue" type="password" required>
+                <label class = "LabelName">Repeat password</label>
+            </div>
+            <div class="inputField">
+                <input class="phone inputValue" type="text" required>
+                <label class = "LabelName">Phone</label>
+            </div>
+            <div class="inputField">
+                <input class="address inputValue" type="text" required>
+                <label class = "LabelName">Address</label>
+            </div>
+            <div class="inputField">
+                <input class="email inputValue" type="text" required>
+                <label class = "LabelName">Email</label>
+            </div>
+            <button type="button" class="btn_register">Registration</button>
+            <p class="regErrText"></p>
+        </form>
+        <a class="backRegister" href="/">Назад</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="sendDataRegistrarion.js"></script>
+</body>
+</html>

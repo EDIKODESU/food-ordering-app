@@ -1,0 +1,135 @@
+body
+{
+    padding: 0;
+    margin: 0;
+    /* background-color: #8db07a; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("/background/burgerBackground.png");
+    background-size: contain;
+}
+
+.registrationBox
+{
+    width: 500px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.regName
+{
+    font-size: 18px;
+    font-family: system-ui;
+    color: #c6c6c6;
+    margin-top: 20px;
+}
+
+.registration_form
+{
+    width: 80%;
+    position: relative;
+}
+
+form .inputField
+{
+    position: relative;
+    border-bottom: 1.5px solid #8bd862;
+    margin: 40px 0;
+}
+
+form .inputField:nth-child(2)
+{
+    margin: 40px 0 20px 0;
+}
+
+.inputField input
+{
+    color: #6f6f6f;
+    padding: 0 5px;
+    height: 24px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    width: 100%;
+}
+
+.inputField label
+{
+    color: #c6c6c6;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    pointer-events: none;
+    transition: .3s;
+}
+
+.inputField input:focus ~ label,
+.inputField input:valid ~ label
+{
+    top: -18px;
+    color: #8bd862;
+}
+
+.btn_registration
+{
+    position: absolute;
+}
+
+.registrationnBox
+{
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+
+.backRegister
+{
+    text-decoration: none;
+    margin: 20px 0 20px 0;
+    color: #6f6f6f;
+    font-family: system-ui;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+
+.btn_register
+{
+    border: none;
+    color: #c6c6c6;
+    font-family: system-ui;
+    background: none;
+    border: 1.5px solid #8db07a;
+    width: 120px;
+    height: 32px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .1s;
+}
+
+.backRegister:hover
+{
+    color: rgb(175, 57, 57);
+}
+
+.btn_register:hover
+{
+    color: #8db07a;
+}
+
+.regErrText
+{
+    font-family: system-ui;
+    color: rgb(175, 57, 57);
+    margin: 0;
+    position: absolute;
+    bottom: 8px;
+    right: 0px;
+    font-size: 14px;
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styleMenu.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="greetingBox"> Welcome!</div>
+    <header class="head_main">
+        <div class="brandNameBox">
+            <img class="brandIMG" src="icon/burger.png" alt="burger">
+            <p class="brandNam">H&T</p>
+        </div>
+        <div class="seachBox">
+            <div class="searchIconBox">
+                <img class="searchIcon" src="icon/search.svg" alt="search">
+            </div>
+            <input class="seachField" type="text" placeholder="Пошук"> 
+            <button onclick= "seach()" class="seachBtn">Seach</button>
+        </div>
+        <div class="listBox" >
+            <div onclick= "openList()" class="listIcon">
+                <img class="list" src="icon/list.svg" alt="list">
+            </div>
+        </div>
+        <div class="cartBox">
+            <div class="cartIcon">
+                <img class="cart" src="icon/shopping-cart-empty-side-view-svgrepo-com.svg" alt="cart">
+            </div>
+        </div> 
+        <div class="logBox">
+            <div class="logIcon">
+                <img class="avatar" src="icon/account-avatar-head-svgrepo-com.svg" alt="avatar">
+            </div>
+            <div class="modal" id="modal">
+                <div class="modal_window">
+                    <div class="modal_header">
+                        <button onclick="closeModal()" class="btmCloseModalWindow">&#215;</button>
+                        <p class="modal_head_name">Вхід</p>
+                    </div>
+                    <div class="modal_body">
+                        <form class="authentication_form">
+                            <div class="inputField">
+                                <input class="login inputValue" type="text" required>
+                                <label>Login</label>
+                            </div>
+                            <div class="inputField">
+                                <input class="pswrd inputValue" type="password" required>
+                                <label>Password</label>
+                            </div>
+                            <div class="registrationnBox">
+                                <a class="btn_registration" href="/sign-up">Registration</a>
+                                <button type="button" class="btn_send">Sign in</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="errLogBox">
+                        <p class="logErrText"></p>
+                    </div>
+                </div>
+            </div>
+            <div onclick="closeModal()" class="modal_screen"></div>
+        </div>
+    </header>
+    <main class="mainBox">
+        <div class="filterBox">
+            <div class="filter">
+                <p class="categoryFilterName">Категорія їжі</p>   
+                <div class="checkbox-list checkbox-list-Dish">
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="food" value="Хот-доги">
+                      <span class="checkbox-custom"></span>
+                      Хот-доги
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="food" value="Піци">
+                      <span class="checkbox-custom"></span>
+                      Піци
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="food" value="Сендвічі">
+                      <span class="checkbox-custom"></span>
+                      Сендвічі
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="food" value="Бургери">
+                      <span class="checkbox-custom"></span>
+                      Бургери
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="food" value="Шаурма">
+                      <span class="checkbox-custom"></span>
+                      Шаурма
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="food" value="Супи">
+                      <span class="checkbox-custom"></span>
+                      Супи
+                    </label>
+                </div>    
+
+                <p class="categoryFilterName">Категорія напитків</p>   
+                <div class="checkbox-list checkbox-list-Drink">
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="food" value="Чаї">
+                      <span class="checkbox-custom"></span>
+                      Чай
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="food" value="Кави">
+                      <span class="checkbox-custom"></span>
+                      Кава
+                    </label>
+                </div>     
+                <p class="categoryFilterName">Сортування</p>  
+                <div class="btnFilterGrowthBox">
+                    <button onclick="filterPrice('ASC')" class="btnGrowth">Зростання</button>
+                    <button onclick="filterPrice('DESC')" class="btnReduction">Зменшення</button>
+                </div>
+                <label class="checkbox-item">
+                    <input type="checkbox" class="checkSortAlphabet" name="alphabet" value="alphabet">
+                    <span class="checkbox-custom"></span>
+                    Категорії за алфавітом
+                </label>
+                
+                <div class="btnFilterAcceptBox">
+                    <button class="btnFilterAccept">Прийняти зміни</button>
+                </div>
+            </div>
+        </div>
+        <div class="productBox">
+            <div class="slider">
+                <div class="btn_pos">
+                    <p class="left_slide">&#60;</p>
+                    <p class="right_slide">&#62;</p>
+                </div>
+                <div class="slider_radio_content">
+                    <button class="slider_radio" id="rad1"></button>
+                    <button class="slider_radio" id="rad2"></button>
+                    <button class="slider_radio" id="rad3"></button>
+                    <button class="slider_radio" id="rad4"></button>
+                </div>
+                <div class="image_slide_line">
+                    <img class="image_slider" src="slide/slide1.png" alt="slider">
+                    <img class="image_slider" src="slide/slide2.png" alt="slider">
+                    <img class="image_slider" src="slide/slide3.png" alt="slider">
+                    <img class="image_slider" src="slide/slide4.png" alt="slider">
+                </div>
+            </div>
+            <div class="menuBox">
+            </div>
+        </div>
+    </main>
+    <footer>
+        
+        <div class="footer_box">
+            <div id="footer_info_box_f">
+                <p>Пошта: <a id="contact_mail" href="mailto:Anymail@gmail.com">helthyAndTasty@gmail.com</a></p>
+                <div class="icon_app_box">
+                    <img class="icon_app" src="icon/instagram.svg" alt="insta">
+                    <img class="icon_app" src="icon/telegram.svg" alt="telegram">
+                    <img class="icon_app" src="icon/viber.svg" alt="viber">
+                    <img class="icon_app" src="icon/twitter.svg" alt="twiter">
+                </div>
+            </div>
+            <div class="footer_info_box">
+                <p class="title_footer_info">Допомога</p>
+                <div class="div_footer_text_info"><a class="footer_text_info" href="#">гарантії</a></div>
+                <div class="div_footer_text_info"><a class="footer_text_info" href="#">доставка</a></div>
+                <div class="div_footer_text_info"><a class="footer_text_info" href="#">оплата</a></div>
+                <div class="div_footer_text_info"><a class="footer_text_info" href="#">кредит</a></div>
+            </div>
+            <div class="footer_info_box">
+                <p class="title_footer_info">Інформація про компанію</p>
+                <div class="div_footer_text_info"><a class="footer_text_info" href="#">про нас</a></div>
+                <div class="div_footer_text_info"><a class="footer_text_info" href="#">контакти</a></div>
+            </div>
+            <div class="footer_info_box">
+                <p class="title_footer_info">Сервіси</p>
+                <div class="div_footer_text_info"><a class="footer_text_info" href="#">бонуси аккаунту</a></div>
+                <div class="div_footer_text_info"><a class="footer_text_info" href="#">тури</a></div>
+                <div class="div_footer_text_info"><a class="footer_text_info" href="#">сертіфікати</a></div>
+            </div>
+        </div>
+        <div id="copyright_box">
+            <p class="copyright">&#169; 2023 Мережа ресторанів «Helthy and Tasty». Усі права захищені &#8482;</p>
+        </div>
+
+    </footer>
+    <div class="modalCart" id="modalCart">
+        <div class="modal_windowCart">
+            <div class="modal_headerCart">
+                <button onclick="deleteCartWindow()" class="btmCloseModalWindowCart">&#215;</button>
+                <p class="modal_head_nameCart">Корзина</p>
+            </div>
+            <div class="modal_body_nameCart">  </div>
+        </div>
+    </div>
+    <div onclick="deleteCartWindow()" class="modal_screenCart"></div>
+
+    <div class="modalList" id="modalList">
+        <div class="modal_windowList">
+            <div class="modal_headerList">
+                <button onclick= "closeList()" class="btmCloseModalWindowList">&#215;</button>
+                <p class="modal_head_nameList">Список заказів</p>
+            </div>
+            <div class="modal_body_nameList">  
+            </div>
+        </div>
+    </div>
+    <div onclick= "closeList()" class="modal_screenList"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="product.js"></script>
+    <script src="slide.js"></script>
+    <script src="modal.js"></script>
+    <script src="sendDataLogin.js"></script>
+    <script src="cart.js"></script>
+    <script src="orderPlacement.js"></script>
+    <script src="list.js"></script>
+    <script src="filterFixed.js"></script>
+</body>
+</html>
